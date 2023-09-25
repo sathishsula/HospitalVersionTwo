@@ -8,7 +8,7 @@ const port = 8070;
 dotenv.config();
 mongoose
   .connect(process.env.MONGO_URL)
-  .then(() => console.log("Database Connected"))
+  .then(() => console.log("Database Connection Successful!"))
   .catch((err) => console.log(err));
 
 app.use(cors());
@@ -55,5 +55,5 @@ app.use("/Order", orderRoutes);
 
 
 app.listen(process.env.PORT || port, () =>
-  console.log(`Example app listening on port ${process.env.PORT}!`)
+  console.log(`Hospital Management App listening on port ${process.env.PORT}!`)
 );
